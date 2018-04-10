@@ -821,7 +821,7 @@ out:
 
 			// If we do, then we'll send a new UpdateFee message to
 			// the remote party, to be locked in with a new update.
-			if err := l.updateChannelFee(feePerKw); err != nil {
+			if err := l.updateChannelFee(feePerKw + 4); err != nil {
 				log.Errorf("unable to update fee rate: %v", err)
 				continue
 			}
